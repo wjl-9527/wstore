@@ -1,0 +1,166 @@
+page{
+  background: #F3F3F3;
+}
+.mytop {
+  width: 750rpx;
+  height: 218rpx;
+  background: #FCCD59;
+}
+.headportrait{
+  width: 112rpx;
+  height: 112rpx;
+  border-radius:50%;
+  overflow:hidden;
+  position:absolute;
+  left: 30rpx;
+  top: 38rpx;
+}
+.memberimg{
+  width: 112rpx;
+  height: 112rpx;
+}
+.signIn{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  left: 142rpx;
+  top:90rpx;
+  position:absolute;
+  font-family: PingFangSC-Medium;
+  font-size: 30rpx;
+  height: 60rpx;
+}
+button::after {
+  border: none;
+}
+.nosign{
+  width: 112rpx;
+  height: 112rpx;
+}
+.membername{
+  left: 166rpx;
+  top:50rpx;
+  position:absolute;
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  width: 184rpx;
+  height: 50rpx;
+}
+.nomembername{
+  color:#C5C5C5;
+  left: 166rpx;
+  top:50rpx;
+  position:absolute;
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  width: 184rpx;
+  height: 50rpx;
+}
+.myinfo{
+  position:absolute;
+  left: 166rpx;
+  top:100rpx;
+  font-size: 26rpx;
+  height: 36rpx;
+}
+.myinfoima{
+  position:absolute;
+  left: 266rpx;
+  top:112rpx;
+  width: 18rpx;
+  height: 18rpx;
+}
+.mymiddle{
+  height: 178rpx;
+  width: 750rpx;
+  background: #FFFFFF;
+}
+.myorder{
+  height: 178rpx;
+  width:178rpx;
+  float: left;
+}
+.mymiddleImg{
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 66rpx;
+  margin-top:44rpx;
+}
+.mymiddleText{
+  width: 72rpx;
+  height: 34rpx;
+  margin-left: 51rpx;
+  margin-bottom:32rpx;
+  font-size: 24rpx;
+}
+.mymiddleTextFour{
+  width: 96rpx;
+  height: 34rpx;
+  margin-left: 51rpx;
+  margin-bottom:32rpx;
+  font-size: 24rpx;
+}
+.mytransverse{
+  width: 750rpx;
+  height: 88rpx;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+.mytransverse_top{
+  margin-top: 20rpx;
+}
+.border_top{
+  border-top: 2rpx solid #EBEBEB;
+}
+.mytransverseImg{
+  width: 32rpx;
+  height: 28rpx;
+  margin-left: 36rpx;
+  margin-top: 30rpx;
+}
+.mytransverseText{
+  width: 96rpx;
+  height: 44rpx;
+  margin-left: 24rpx;
+  margin-top: 22rpx;
+  font-size: 32rpx;
+}
+.mytransverseRightImg{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 30rpx;
+}
+.mytransverseRight{
+  float:right;
+  line-height: 88rpx;
+}
+.mytransverseLeft{
+  float:left;
+  line-height: 88rpx;
+}
+.mytransverseRightText{
+  width: 28rpx;
+  height: 40rpx;
+  color: #999999;
+  margin-right: 4rpx;
+  font-size: 28rpx;
+}
+.mytransverseRightTextNum{
+  width: 28rpx;
+  height: 40rpx;
+  color: #F76D18;
+  font-size: 28rpx;
+}
+.round{
+  background-color: red;
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 50%;
+  font-size: 16rpx;
+  color: white;
+  text-align: center;
+  line-height: 26rpx;
+  margin-left: 144rpx;
+  margin-top: -120rpx;
+}

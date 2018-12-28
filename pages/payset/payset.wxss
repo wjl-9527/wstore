@@ -1,0 +1,88 @@
+page{
+  background: #F3F3F3;
+}
+.payTop{
+  width: 100%;
+  height: 250rpx;
+  background: #FFFFFF;
+  border-top: 2rpx solid #DEDEDE;
+  text-align: center;
+}
+.toptext{
+  font-size: 30rpx;
+  color: #999999;
+  margin-top: 30rpx;
+  height: 42rpx;
+}
+.box{
+  margin-top: 18rpx;
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+  justify-content: center;
+}
+.toptext2{
+  font-size: 28rpx;
+  color: #F76D18;
+  height: 40rpx;
+  margin-top: 15rpx;
+}
+.toptext1{
+  font-size: 60rpx;
+  color: #F76D18;
+}
+.paym{
+  font-size: 26rpx;
+  color: #000000;
+  margin-left: 24rpx;
+  margin-top: 24rpx;
+}
+.payh{
+  display: flex;
+  background: #FFFFFF;
+  width: 100%;
+  height: 112rpx;
+  line-height: 112rpx;
+  margin-top: 12rpx;
+  position: relative; 
+}
+.payhim{
+  width: 34rpx;
+  height: 32rpx;
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+}
+.payhtext{
+  width: 130rpx;
+  font-size: 32rpx;
+  color: #000000;
+  height: 44rpx;
+  margin-left: 18rpx;
+}
+.payhim1{
+  position: absolute;
+  width: 36rpx;
+  height: 36rpx;
+  right: 24rpx;
+  top: 38rpx;
+}
+.paybut{
+  display: flex;
+  justify-content: center;
+  background: #FCCD59;
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+  border: 2rpx solid #DEDEDE;
+  border-radius: 10rpx;
+}
+.buttext1{
+  font-size: 32rpx;
+  height: 44rpx;
+}
+.buttext2{
+  font-size: 44rpx;
+  height: 60rpx;
+}

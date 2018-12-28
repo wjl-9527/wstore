@@ -1,0 +1,83 @@
+<view class="mytop">
+<block wx:if="{{!userInfo || userInfo == 'undefined'}}">
+ <view class='headportrait'>
+    <image class='nosign' src='../image/mine.png'></image>
+  </view>
+  <view class='nomembername'>未登录</view>
+  <button class='signIn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点我登录账号</button>
+</block>
+<block wx:else>
+  <view class='headportrait'>
+    <image class='memberimg' src='{{userInfo.avatarUrl}}'></image>
+  </view>
+  <view class='membername'>{{userInfo.nickName}}</view>
+</block>
+</view>
+<view class='mymiddle'>
+  <view class='myorder' bindtap='toMyOrders' data-order_status='2'>
+  <image class='mymiddleImg' src='../image/tobepaid.png'></image>
+  <text class='mymiddleText' >待支付</text>
+  <view wx:if="{{to_pay_order_qty !=0 }}" class='round'>{{to_pay_order_qty}}</view>
+  </view>
+  <view class='myorder'bindtap='toMyOrders' data-order_status='3'>
+  <image class='mymiddleImg' src='../image/goodstobesend.png'></image>
+  <text class='mymiddleText' >待发货</text>
+  <view wx:if="{{to_receipt_order_qty !=0 }}" class='round'>{{to_receipt_order_qty}}</view>
+  </view>
+  <view class='myorder'bindtap='toMyOrders' data-order_status='4'>
+  <image class='mymiddleImg' src='../image/goodstobereceived.png'></image>
+  <text class='mymiddleText' >待收货</text>
+  <view wx:if="{{to_receipt_order_qty !=0 }}" class='round'>{{to_receipt_order_qty}}</view>
+  </view>
+  <view class='myorder'bindtap='toMyOrders' data-order_status='1'>
+  <image class='mymiddleImg' src='../image/history.png'></image>
+  <text class='mymiddleTextFour' >全部订单</text>
+  </view>
+</view>
+<view class='mytransverse mytransverse_top'bindtap='tocoupon'>
+  <image class='mytransverseImg' src='../image/coupon.png'></image>
+  <text class='mytransverseText' >优惠券</text>
+  <view class='mytransverseRight'>
+    <view wx:if="{{coupons_coupon !=0 }}"  class='mytransverseLeft'>
+      <text class='mytransverseRightTextNum'>{{coupons_coupon}}</text>
+      <text class='mytransverseRightText'>张</text>
+    </view>
+    <image class='mytransverseRightImg' src='../image/transverseright.png'></image>
+  </view>
+</view>
+<view class='mytransverse border_top' bindtap='togiftcertificate'>
+  <image class='mytransverseImg' src='../image/commoditycoupons.png'></image>
+  <text class='mytransverseText' >商品券</text>
+  <view class='mytransverseRight'>
+    <view wx:if="{{coupons_cc !=0 }}" class='mytransverseLeft'>
+      <text class='mytransverseRightTextNum'>{{coupons_cc}}</text>
+      <text class='mytransverseRightText'>张</text>
+    </view>
+    <image class='mytransverseRightImg' src='../image/transverseright.png'></image>
+  </view>
+</view>
+
+<view class='mytransverse border_top' bindtap='toaddressList'>
+  <image class='mytransverseImg' src='../image/address.png'></image>
+  <text class='mytransverseText' >收货地址</text>
+  <view class='mytransverseRight'>
+    <image class='mytransverseRightImg' src='../image/transverseright.png'></image>
+  </view>
+</view>
+
+<!-- 导航栏 -->
+<view class='b_nav_box'>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="index">
+    <image src='../image/index.png'></image>
+  </view>
+  <view bindtap='bottomNav'  class='b_n_nav' data-ispage="1" data-kind="calss">
+    <image src='../image/n_class.png'></image>
+  </view>
+  <view bindtap='bottomNav'  class='b_n_nav' data-ispage="1" data-kind="cart">
+    <image src='../image/n_cart.png'></image>
+    <view wx:if="{{num != 0 }}" class='box-infor num num2'>1</view>
+  </view>
+  <view bindtap='bottomNav'  class='b_n_nav' data-ispage="0" data-kind="my">
+    <image src='../image/a_n_my.png'></image>
+  </view>
+</view>

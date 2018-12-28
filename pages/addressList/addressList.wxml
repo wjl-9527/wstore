@@ -1,0 +1,22 @@
+<view>
+  <view class='no' wx:if="{{addressList.length == 0}}">
+    <image class='nomarketlogo' src='../image/nomarket.png'></image>
+    <text class='nomarkettip'>您还没有收货地址哦~</text>
+    <view  bindtap='toAddAddress2' class='nomarkettn'>新建收货地址</view>
+  </view>
+ <view wx:else class='addresswall'>
+    <view bindtap='selcetLocation' data-index='{{i}}' wx:for-index="i" class='address' wx:for="{{addressList}}" wx:key="position">
+      <image src='../image/select.png' wx:if="{{item.unused == '1'}}" class='selsctlog'></image>
+      <image src='../image/pickfree.png' wx:if="{{item.unused1 == 'zt'}}" class='seledcpick'></image>
+      <view class='a_top'><text>{{item.recipient}} </text> <text style='float:right;'> {{item.phoneNum}}</text></view>
+      <view class='a_bottom'>{{item.city}}{{item.county}}{{item.address}}</view>
+      <view class='changeaddress'>编辑</view>
+    </view>
+    <view class='addaddress' bindtap='toAddAddress'>
+      <image src='../image/add.png' class='box-infor addlogo'></image>
+      <text class='box-infor addtip'>新增收货地址</text>
+    </view>
+    <view style='width:100%;height:88rpx;'></view>
+  </view>
+</view>
+<!-- 删除蒙层 -->

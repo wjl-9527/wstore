@@ -1,0 +1,273 @@
+.searchbox {
+  width: 100%;
+  height: 96rpx;
+  position: relative;
+}
+
+.serachbtn {
+  position: absolute;
+  right: 24rpx;
+  top: 26rpx;
+  color: #818181;
+  font-size: 32rpx;
+}
+
+.searchlogo {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 48rpx;
+  top: 34rpx;
+  z-index: 3;
+}
+
+.clearlogowall {
+  position: absolute;
+  top: 20rpx;
+  right: 116rpx;
+  z-index: 9;
+  width: 132rpx;
+  height: 56rpx;
+  background: #efefef;
+  border-radius: 0 200rpx 200rpx 0;
+}
+
+.clearlogo {
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 3;
+  display: block;
+  margin-top: 11rpx;
+  margin-left: 83rpx;
+}
+
+.search {
+  width: 475rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background: #efefef;
+  border-radius: 200rpx 0 0 200rpx;
+  position: absolute;
+  left: 24rpx;
+  top: 20rpx;
+  padding-left: 68rpx;
+  font-size: 28rpx;
+}
+
+/* 热门搜索 */
+
+.hotwall {
+  padding-top: 20rpx;
+  overflow: hidden;
+}
+
+.hottit {
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.hotbox {
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width: 700rpx;
+  overflow: hidden;
+}
+
+.hot {
+  float: left;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 22rpx;
+  padding-right: 20rpx;
+  background: #f2f2f2;
+  border-radius: 8rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+/* 历史搜索 */
+
+.historywall {
+  padding-top: 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.historytit {
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.historybox {
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width: 700rpx;
+  overflow: hidden;
+}
+
+.history {
+  float: left;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 22rpx;
+  padding-right: 20rpx;
+  background: #f2f2f2;
+  border-radius: 8rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.clearwall {
+  position: absolute;
+  right: 24rpx;
+  top: 17rpx;
+  font-size: 28rpx;
+  color: #999;
+  display: flex;
+  width: 209rpx;
+  height: 40rpx;
+}
+
+.cleartxt {
+  position: absolute;
+  right: 0;
+}
+
+.delelogo {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  left: 0;
+  top: 5rpx;
+}
+
+/* 中间态 */
+
+.statu2 {
+  width: 100%;
+  height: 1110rpx;
+  background: #f3f3f3;
+}
+
+/* 搜索结果 */
+
+.sortingbox {
+  position: relative;
+}
+
+.slectpriclogo {
+  width: 14rpx;
+  height: 18rpx;
+  position: absolute;
+  top: 33rpx;
+  right: 58rpx;
+}
+
+.sorting {
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  border-bottom: 1px solid #dedede;
+}
+
+.sortingbtn {
+  float: left;
+  width: 33.33%;
+  overflow: hidden;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+  position: relative;
+}
+
+/* 商品框 */
+
+.goodsWall {
+  width: 750rpx;
+  height: 1020rpx;
+  position: absolute;
+  top: 180rpx;
+  right: 0;
+}
+
+.goodsbox {
+  position: relative;
+  width: 100%;
+  height: 224rpx;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #dedede;
+}
+
+.goodsimg {
+  width: 166rpx;
+  height: 166rpx;
+  top: 32rpx;
+  left: 28rpx;
+}
+
+.goodsname {
+  font-size: 26rpx;
+  left: 214rpx;
+  top: 20rpx;
+}
+
+.line {
+  right: 0;
+  bottom: 0;
+  width: 356rpx;
+  height: 2rpx;
+  background: #dedede;
+}
+
+.goodsepric {
+  color: #f76d18;
+  top: 154rpx;
+  left: 214rpx;
+  font-size: 36rpx;
+}
+
+.goodsepric >text {
+  font-size: 30rpx;
+}
+
+.goodseoldpric {
+  font-size: 24rpx;
+  color: #999;
+  left: 10rpx;
+  top: 164rpx;
+  text-decoration-line: line-through;
+}
+
+.addgoods {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  top: 154rpx;
+  right: 24rpx;
+  z-index: 999;
+}
+
+.nogoodslogo {
+  width: 182rpx;
+  height: 182rpx;
+  position: absolute;
+  top: 248rpx;
+  left: 285rpx;
+}
+
+.nogoodstip {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  position: absolute;
+  top: 450rpx;
+}

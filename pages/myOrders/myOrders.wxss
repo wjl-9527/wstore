@@ -1,0 +1,175 @@
+page{
+  background: #F8F8F8;
+}
+.top{
+  border-top: 2rpx solid #EBEBEB;
+  height: 80rpx;
+  width: 750rpx;
+  background: #FFFFFF;
+}
+.top_tab{
+  height: 80rpx;
+  width: 187rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+  float: left;
+}
+.active{
+  border-bottom: 4rpx solid #FCCD59;
+  margin-left: 48rpx;
+  width: 92rpx;
+}
+.orderList{
+  width: 750rpx;
+  background: #FFFFFF;
+  margin-top: 18rpx;
+  overflow: hidden;
+}
+.orderList_top{
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.orderList_middle{
+  width: 750rpx;
+  height: 166rpx;
+  background:#F9F9F9;
+}
+.orderList_bottom{
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.top_content{
+  color:#cccccc;
+  font-size: 28rpx;
+  height: 40rpx;
+  margin-left: 47rpx;
+}
+.top_desc{
+  float: right;
+  color: #F76D18;
+  height: 34rpx;
+  font-size: 28rpx;
+  margin-right: 22rpx;
+}
+.middlebox{
+  display: flex;
+}
+.middle{
+  width: 124rpx;
+  height: 124rpx;
+  margin-left: 26rpx;
+  position: relative;
+}
+.middleImg{
+  width: 124rpx;
+  height: 124rpx;
+  margin-top:15rpx;
+}
+.middleText{
+  width: 56rpx;
+  height: 24rpx;
+  text-align: center;
+  line-height: 24rpx;
+  background: #FDCC56;
+  font-size: 18rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.totalPrice{
+  font-size:29rpx;
+  text-align:right;
+  height:74rpx;
+  border-bottom: 2rpx solid #F5F5F5;
+  line-height:74rpx;
+  margin-right: 20rpx;
+}
+.middle1{
+  width: 600rpx;
+  height: 68rpx;
+  float: right;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  margin-top:15rpx;
+}
+.middleContent{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 438rpx;
+  height: 68rpx;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  float: left;
+  margin-left: 20rpx;
+  font-weight: 400;
+}
+.content_right{
+  font-size:30rpx;
+  width:139rpx;
+  height:28rpx;
+  float:right;
+}
+.prd-spec{
+  width: 600rpx;
+  margin-left: 25rpx;
+  color: #cccccc;
+  float:left;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.bottommoney{
+  font-size: 23rpx;
+  margin-left: 20rpx;
+  float: left;
+  height: 40rpx;
+}
+.bottomBut{
+  float: right;
+  margin-right: 22rpx;
+  font-size: 28rpx;
+  width: 164rpx;
+  height: 60rpx;
+  border: 1px solid #DEDEDE;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  margin-top: 12rpx;
+  text-align: center;
+}
+.bottomButY{
+  background: #FCCD59;
+}
+.noListImg{
+  width: 182rpx;
+  height: 182rpx;
+  margin-left: 284rpx;
+  margin-top: 418rpx;
+}
+.noListNum{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  background: rgba(0,0,0,.3);
+  right: 30rpx;
+  border-radius: 50%;
+}

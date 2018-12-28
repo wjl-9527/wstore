@@ -1,0 +1,63 @@
+page{
+  background: #f3f3f3;
+  border-top: 1px solid #dedede;
+}
+.nolog{
+  width: 182rpx;
+  height: 182rpx;
+  position: absolute;
+  top: 418rpx;
+  left: 284rpx;
+}
+.notxt{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 620rpx;
+  font-size: 28rpx;
+}
+.cashbox{
+  width: 702rpx;
+  height: 212rpx;
+  margin: 0 auto;
+  margin-top: 22rpx;
+  position: relative;
+  overflow: hidden;
+}
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.name{
+  font-size: 28rpx;
+  top: 32rpx;
+  left: 40rpx;
+  width: 440rpx;
+}
+.yxq{
+  top: 156rpx;
+  left: 40rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.value{
+  top: 12rpx;
+  right: 40rpx;
+  color: #f76d18;
+  font-size: 60rpx;
+}
+.usetip{
+  right: 40rpx;
+  top: 82rpx;
+  font-size: 24rpx;
+}
+.logo{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48rpx;
+  height: 48rpx;
+}

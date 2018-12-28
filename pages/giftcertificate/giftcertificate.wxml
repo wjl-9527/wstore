@@ -1,0 +1,25 @@
+<view wx:if="isShow">
+  <view wx:if="{{coupons_details.length > 0}}">
+    <view>
+      <view wx:for="{{coupons_details}}" wx:key="{{item.amount}}">
+        <view class='giftcertList'>
+          <view class='content'>
+            {{item.info}}
+          </view>
+          <image class='img' src='../image/nouse{{item.status}}.png'></image>
+          <view class="endTime">有效期至:{{item.end_date_time}}</view>
+          <view class='border_bottom'></view>
+          <view class='button' bindtap='toPDetails' data-sku_ctgy="{{item.sku_ctgy}}">查看此商品></view>
+        </view>
+      </view>
+    </view>
+    <view class='toMore' wx:if="{{ end == true && end2 == true }}">
+      无更多券了
+    </view>
+    <view class='botton_zw'></view>
+  </view>
+  <view wx:else>
+    <image class='nocouponListImg' src='../image/nogiftcertificateListImg.png'></image>
+    <view class='nocouponListNum'>暂无可用商品券哦</view>
+  </view>
+</view>

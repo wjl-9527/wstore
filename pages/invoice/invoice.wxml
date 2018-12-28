@@ -1,0 +1,41 @@
+<view class='box box1'>
+  <view class='inType'>发票类型</view>
+  <radio-group class="radioG" bindchange="typeChange">
+    <radio class='radio' color='#FCCD59' wx:for-items="{{inTypeitems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+      <text>{{item.value}}</text>
+    </radio>
+  </radio-group>
+</view>
+
+<view wx:if="{{inType}}">
+  <view class='box box2'>
+    <view class='inType'>发票抬头</view>
+    <radio-group class="radioG" bindchange="topChange">
+      <radio class='radio' color='#FCCD59' wx:for-items="{{inTop}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <text>{{item.value}}</text>
+      </radio>
+    </radio-group>
+  </view>
+
+  <view wx:if="{{isCompany}}">
+    <view class='inpuBox box2'>
+      <input bindinput='inpName' class='inpu' maxlength='50' placeholder="请输入公司名称(必填)" value='{{invoice_title}}' />
+    </view>
+    <view class='inpuBox box1'>
+      <input bindinput='inpNum' class='inpu' maxlength='20' placeholder="请输入公司税号(必填)" value='{{invoice_num}}' />
+    </view>
+  </view>
+
+  <view class='box box2'>
+    <view class='inType'>发票内容</view>
+    <radio-group class="radioG" bindchange="conChange" >
+      <radio class='radio' color='#FCCD59' wx:for-items="{{inCon}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <text>{{item.value}}</text>
+      </radio>
+    </radio-group>
+  </view>
+
+  <view class='but' bindtap='toConfirmOrder' >
+    提交
+  </view>
+</view>

@@ -1,0 +1,56 @@
+<view wx:if="{{isShow}}">
+  <view class='top'>
+    <view wx:for="{{tapList}}" wx:for-index="i" wx:key="{{item.order_status}}">
+      <view bindtap='toQuery' class='top_tab' data-index='{{i}}' data-order_status="{{item.order_status}}">
+        <view>{{item.title}}</view>
+        <view wx:if="{{ item.select == 1 }}" class="active"></view>
+      </view>
+    </view>
+  </view>
+
+<image src='../image/button-top.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+
+ <view wx:if="{{ order_list.length == 0 }}">
+    <image class='noListImg' src='../image/noListImg.png'></image>
+    <view class='noListNum'>暂无相关订单</view>
+  </view>
+  <view wx:else>
+ <view wx:for="{{order_list}}" wx:for-index="i" wx:key="{{item.orderNo}}">
+      <view class='orderList'>
+        <view class='orderList_top'>
+          <test class='top_content'>订单编号：{{item.orderNo}}</test>
+          <view  class='top_desc' wx:if='{{item.status == "WAIT_BUYER_PAY"}}'>等待买家付款</view>
+          <view class='top_desc' wx:if='{{item.status == "WAIT_SELLER_SEND_GOODS"}}'>等待卖家发货</view>
+          <view class='top_desc' wx:if='{{item.status == "WAIT_BUYER_CONFIRM_GOODS"}}'>等待买家确认收货</view>
+          <view class='top_desc' wx:if='{{item.status == "TRADE_FINISHED"}}'>交易成功</view>
+          <view class='top_desc' wx:if='{{item.status == "TRADE_CLOSED"}}'>交易关闭</view>
+          <view class='top_desc' wx:if='{{item.status == "TRADE_APPLY_REFUND"}}'>申请退款订单</view>
+        </view>
+
+        <view wx:if='{{item.productId != 1}}' class='orderList_middle' wx:for="{{item.orderItemVoList}}" wx:for-index="i" wx:key="{{item.oid}}" bindtap='toOrderDetails'>
+          <view class='middle1'>
+            <view class='content_right'>￥{{item.totalPrice}}</view>
+            <view class='middleContent'>{{item.productName}}</view>
+            <view class='prd-spec'>{{item.specColor}}</view>
+          </view>
+          
+          <view>
+            <view class='middle'>
+              <image class='middleImg' src='{{item.productImage}}'></image>
+              <view class='middleText'>{{item.quantity}}件</view>
+            </view>
+          </view>
+        </view>
+        <view class='totalPrice'>合计: ￥{{item.payment}}<text wx:if='{{item.postage != null}}'>(含运费：￥{{item.postage}})</text></view>
+
+        <view class='orderList_bottom'>
+          <view  bindtap='toPayset' data-orderid='{{item.orderNo}}' wx:if='{{item.status == "WAIT_BUYER_PAY"}}' class='bottomBut bottomButY'>去支付</view>
+          <view bindtap='cancelorder' data-orderid='{{item.orderNo}}' data-index="{{i}}" wx:if='{{item.status == "WAIT_BUYER_PAY"}}' class='bottomBut'>取消订单</view>
+          <view bindtap='seelogistics' data-orderid='{{item.orderNo}}' wx:if='{{item.status == "WAIT_SELLER_SEND_GOODS"}}' class='bottomBut'>提醒卖家发货</view>
+          <view wx:if='{{item.status == "WAIT_BUYER_CONFIRM_GOODS"}}' bindtap='confirmorder' data-orderid='{{item.orderNo}}' data-index="{{i}}" class='bottomBut bottomButY'>确认收货</view>
+          <view bindtap='seelogistics' data-orderid='{{item.orderNo}}' wx:if='{{item.status == "WAIT_BUYER_CONFIRM_GOODS"}}' class='bottomBut'>查看物流</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

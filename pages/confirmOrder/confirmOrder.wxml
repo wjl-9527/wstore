@@ -1,0 +1,63 @@
+<view class="container">
+     <form report-submit="true">
+     <view class="address-box">
+        <view class="add-address" hidden="{{curAddressData}}">
+            <view class="title" bindtap="addAddress">添加收货地址</view>
+        </view>
+        <view class="show-address" hidden="{{!curAddressData}}"  bindtap="selectAddress">
+            <view class="name-tel">  <text>{{goodsList.shippingVo.receiverName}}</text> <text style='float:right;'> {{goodsList.shippingVo.receiverPhone}}</text></view>
+            <view class="addr-text">{{goodsList.shippingVo.receiverProvince}}{{goodsList.shippingVo.receiverCity}}{{goodsList.shippingVo.receiverDistrict}}{{goodsList.shippingVo.receiverAddress}}</view>
+        </view>
+     </view>
+     <view class="goods-list">
+        <view class="list-title">商品列表</view>
+        <view class="a-goods" wx:for-items="{{goodsList.orderItemVoList}}" wx:key="{{index}}" wx:if="{{item.productId != 1}}">
+            <view class="img-box">
+                <image src="{{item.productImage}}" class="img" />
+            </view>
+            <view class="text-box">
+                <view class="arow arow01">
+                    <view class="goods-name">{{item.productName}}</view>
+                    <view class="goods-price">¥ {{item.totalPrice}}</view>
+                </view>
+                <view class="arow">
+                    <view class="goods-label">{{item.specColor}}</view>
+                    <view class="goods-num">x {{item.quantity}}</view>
+                </view>
+            </view>
+        </view>
+     </view>
+     <view class="peisong-way">
+        <view class="row-box">
+            <view class="row-label">配送方式</view>
+            <view class="right-text" wx:if="{{yunPrice > 0}}">快递</view>
+            <view class="right-text" wx:if="{{yunPrice == 0}}">包邮</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">备注</view>
+            <view class="right-text">
+                <input name="remark" type="text" class="liuyan" placeholder="建议先与商家沟通确认" />
+            </view>
+        </view>
+     </view>
+
+
+     <view class="goods-info" >
+        <view class="row-box" >
+            <view class="row-label">商品金额</view>
+            <view class="right-text">¥ {{storePrice}}</view>
+        </view>
+        <view class="row-box" wx:if="{{yunPrice > 0}}">
+            <view class="row-label">运费</view>
+            <view class="right-text">+ ¥ {{yunPrice}}</view>
+        </view>
+     </view>
+
+     <view class="jiesuan-box">
+        <view class="left-price">
+            <view class="total">合计：¥ {{allGoodsPrice}}</view>
+        </view>
+        <button class="to-pay-btn" formType="submit" bindtap="confirmAnOrder">确认下单</button>
+    </view>
+    </form>
+</view>

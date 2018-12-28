@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/wxauth/wxauth",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/cart/cart",
+    "pages/confirmOrder/confirmOrder",
+    "pages/lmmessage/lmmessage",
+    "pages/chaneadres/chaneadres",
+    "pages/classification/classification",
+    "pages/chaneMyaddress/chaneMyaddress",
+    "pages/canusecash/canusecash",
+    "pages/pDetails/pDetails",
+    "pages/addAddress/addAddress",
+    "pages/giftcertificate/giftcertificate",
+    "pages/coupon/coupon",
+    "pages/myOrders/myOrders",
+    "pages/goodsd/goodsd",
+    "pages/payset/payset",
+    "pages/paygo/paygo",
+    "pages/voucherRules/voucherRules",
+    "pages/invoice/invoice",
+    "pages/addressList/addressList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#040404",
+    "navigationBarTitleText": "水星商城",
+    "navigationBarTextStyle": "#fff",
+    "onReachBottomDistance": 50
+  }
+}

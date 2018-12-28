@@ -1,0 +1,32 @@
+<view wx:if="{{isShow}}">
+  <view wx:if="{{coupons_details.length > 0}}">
+    <view wx:for="{{coupons_details}}" wx:key="{{item.amount}}">
+      <view class="couponList">
+        <view class='content'>{{item.info}}</view>
+        <view class="rightView">
+          <view wx:if="{{business_type == 0 }}" class='rightNum'>{{item.amount}}</view>
+          <view wx:if="{{business_type == 2 }}" class='rightNum1'>{{item.amount}}</view>
+          <view class='rightCon'>{{item.name}}</view>
+        </view>
+        <view class='border_bottom'></view>
+        <image wx:if="{{business_type == 2 }}" class='couponsImg' src='../image/coupons{{item.status}}.png'></image>
+        <view class='endData'>有效期至:{{item.end_date_time}}</view>
+      </view>
+    </view>
+    <view class='toMore' wx:if="{{ end == true }}">
+      无更多券了
+    </view>
+    <view class='botton_zw'></view>
+
+  </view>
+  <view wx:else>
+    <image class='nocouponListImg' src='../image/nocouponListImg.png'></image>
+    <view wx:if="{{business_type == 0 }}" class='nocouponListNum'>暂无可用优惠券哦</view>
+    <view wx:if="{{business_type == 2 }}" class='nocouponListNum'>暂无优惠券哦</view>
+  </view>
+  <view class='bottom_button'>
+    <view wx:if="{{business_type == 0 }}" class='button1' bindtap='toinvalidCoupon'>查看无效券</view>
+    <view wx:if="{{business_type == 2 }}" class='button1' bindtap='toCoupon'>查看优惠券</view>
+    <view class='button1' bindtap='openRules'>使用规则</view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="no" wx:if="{{cashList.length == 0}}">
+      <image class='nolog' src='../image/nocouponListImg.png'></image>
+      <view class='notxt'>暂无可用优惠券哦</view>
+</view>
+<view wx:else class='yes'>
+ <view bindtap='setOrder' class='cashbox' wx:for="{{cashList}}" wx:key="name" data-couponid='{{item.id}}'>
+ <image class='bg' src='../image/usercashbg.png'></image>
+ <image wx:if="{{item.select}}" class='logo' src='../image/usecashlog.png'></image>
+  <view class='box-infor name'>{{item.info}}</view>
+  <view class='box-infor value'>{{item.value}}</view>
+  <view class='box-infor yxq'>有效期至{{item.end_date_time}}</view>
+  <view class='box-infor usetip'>{{item.name}}</view>
+ </view>
+</view>

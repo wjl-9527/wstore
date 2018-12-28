@@ -1,0 +1,41 @@
+<!--主盒子-->
+<view class="container">
+  <!--左侧栏-->
+  <view class="nav_left">
+    <block wx:for="{{classifyItems}}" wx:key="customCatId">
+      <view class="nav_left_items {{curNav == item.displayOrder ? 'active' : ''}}" data-curn='{{curNav}}' bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.displayOrder}}">
+          {{item.name}}
+        </view>
+    </block>
+  </view>
+  <!--右侧栏-->
+  <view class="nav_right">
+    <!--如果有数据，才遍历项-->
+      <block wx:for="{{classifyItems[curIndex].tags}}"  wx:key="prdTagId">
+        <view class="nav_right_items">
+        <!--界面跳转 -->
+          <navigator url="/pages/classifyGoods/classifyGoods?classifyId={{item.prdTagId}}">
+            <text>{{item.tagName}}</text>
+          </navigator>
+        </view>
+      </block>
+  </view>
+</view>
+
+
+<!-- 导航栏 -->
+<view class='b_nav_box'>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="index">
+    <image src='../image/index.png'></image>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="0" data-kind="calss">
+    <image src='../image/a_class.png'></image>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="cart">
+    <image src='../image/n_cart.png'></image>
+    <view class='box-infor num num2'>1</view>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="my">
+    <image src='../image/n_my.png'></image>
+  </view>
+</view>

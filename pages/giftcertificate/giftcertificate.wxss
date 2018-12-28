@@ -1,0 +1,71 @@
+page{
+  background: #F3F3F3;
+}
+.giftcertList{
+  background: #FFFFFF;
+  width: 702rpx;
+  height: 232rpx;
+  overflow:hidden;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+}
+.content{
+  font-size: 28rpx;
+  width: 460rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+  margin-top: 28rpx;
+  line-height: 40rpx;
+}
+.endTime{
+  color: #999999;
+  font-size: 26rpx;
+  width: 400rpx;
+  height: 36rx;
+  margin-left: 40rpx;
+}
+.border_bottom{
+  border-bottom:2rpx dashed  #DEDEDE; 
+  height: 4rpx;
+  width: 662rpx;
+  margin-left: 20rpx;
+  margin-top: 12rpx;
+}
+.button{
+  font-size: 26rpx;
+  color: #FF8903;
+  float: right;
+  margin-top: 8rpx;
+  margin-right: 24rpx;
+  height: 36rpx;
+  width: 166rpx;
+}
+.img{
+  width: 84rpx;
+  height: 84rpx;
+  float: right;
+  margin-top: -106rpx;
+}
+.toMore{
+  margin-left: 308rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #545454;
+  width: 200rpx;
+  height: 40rpx;
+}
+.botton_zw{
+  width: 750rpx;
+  height: 50rpx;
+}
+.nocouponListImg{
+  width: 182rpx;
+  height: 182rpx;
+  margin-left: 284rpx;
+  margin-top: 418rpx;
+}
+.nocouponListNum{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}

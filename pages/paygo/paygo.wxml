@@ -1,0 +1,12 @@
+<view class="panel">
+  <image class='panimg' src='../image/selcet.png'></image>
+  <view class='panText1'>订单金额</view>
+  <view class='box'>
+    <view class='panText2'>￥</view>
+    <view class='panText3'>{{order_amount}}</view>
+  </view>
+  <view  class='box1'>
+    <view class='button1' bindtap='toMain'>继续逛逛</view>
+    <view class='button1' bindtap='toMyorder'>查看订单</view>
+  </view>
+</view>

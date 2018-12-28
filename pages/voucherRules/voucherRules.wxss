@@ -1,0 +1,8 @@
+.all{
+  font-size: 32rpx;
+  margin-left: 30rpx;
+  width: 690rpx;
+}
+.text{
+  margin-top: 50rpx;
+}

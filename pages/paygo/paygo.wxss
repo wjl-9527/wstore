@@ -1,0 +1,53 @@
+page{
+  background: #F3F3F3;
+}
+.panel{
+  background: #FFFFFF;
+  width: 100%;
+  height: 596rpx;
+  border-top: 2rpx solid #DEDEDE;
+  text-align: center;
+}
+.panimg{
+  width: 112rpx;
+  height: 112rpx;
+  margin-top: 78rpx;
+}
+.panText1{
+  font-size: 30rpx;
+  margin-top: 22rpx;
+}
+.box{
+  margin-top: 14rpx;
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+  justify-content: center;
+}
+.panText2{
+  font-size: 28rpx;
+  color: #F76D18;
+}
+.panText3{
+  font-size: 60rpx;
+  color: #F76D18;
+}
+.box1{
+  margin-top: 90rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: -webkit-flex;
+  display:flex;
+  justify-content: center;
+}
+.button1{
+  background: #FCCD59;
+  width: 268rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border: 2rpx solid #DEDEDE;
+  border-radius: 10rpx;
+  margin: 20rpx;
+}

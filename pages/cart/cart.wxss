@@ -1,0 +1,310 @@
+page {
+  background: #f3f3f3;
+}
+
+.no {
+  position: relative;
+}
+
+.nogoodslogo {
+  width: 182rpx;
+  height: 182rpx;
+  position: absolute;
+  top: 320rpx;
+  left: 284rpx;
+}
+
+.nogoodstip {
+  text-align: center;
+  width: 100%;
+  font-size: 28rpx;
+  position: absolute;
+  top: 522rpx;
+}
+
+.nogoodstxt {
+  width: 252rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 80rpx;
+  border: 1px solid #c2c2c2;
+  font-size: 32rpx;
+  position: absolute;
+  top: 604rpx;
+  left: 250rpx;
+}
+
+.cartnav {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 100rpx;
+  background: #fff;
+  border-top: 1px solid rgba(198, 198, 198, 0.50);
+}
+
+.toClear {
+  position: absolute;
+  right: 0;
+  background: #fccd59;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  width: 240rpx;
+}
+
+.totaltip {
+  position: absolute;
+  left: 168rpx;
+  font-size: 36rpx;
+  color: #f76d18;
+}
+
+.totaltip>text {
+  font-size: 24rpx;
+  color: #545454;
+}
+
+/* 正常购物车列表 */
+
+.normalgoodslist {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.normalgoods {
+  overflow: hidden;
+  margin-top: 20rpx;
+  width: 100%;
+  height: 224rpx;
+  background: #fff;
+  position: relative;
+}
+
+.goodsimg {
+  width: 178rpx;
+  height: 178rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 80rpx;
+}
+
+.goodsname {
+  font-size: 28rpx;
+  color: #000;
+  position: absolute;
+  top: 20rpx;
+  left: 274rpx;
+  width: 418rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goodspec {
+  font-size:23rpx;
+  color:#cccccc;
+  position:absolute;
+  top:110rpx;
+  left:274rpx;
+  width:56%;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+
+.goodsprc {
+  position: absolute;
+  left: 274rpx;
+  top: 146rpx;
+  color: #f76d18;
+  font-size: 36rpx;
+}
+
+.goodsprc>text {
+  font-size: 24rpx;
+}
+
+.oldgoodsprc {
+  position: absolute;
+  top: 158rpx;
+  left: 401rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-decoration-line: line-through;
+}
+
+.numbox {
+  position: absolute;
+  top: 146rpx;
+  right: 24rpx;
+  width: 156rpx;
+  height: 48rpx;
+  overflow: hidden;
+  background: red;
+  background: #fff;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 28rpx;
+}
+
+.cutnum {
+  position: absolute;
+  left: 0;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.addnum {
+  position: absolute;
+  right: 0;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.selectbox {
+  position: absolute;
+  width: 36rpx;
+  height: 36rpx;
+  top: 94rpx;
+  left: 20rpx;
+}
+
+.selectbox >image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 优惠商品 */
+
+.cashgoods {
+  overflow: hidden;
+  margin-top: 20rpx;
+  width: 100%;
+  height: 296rpx;
+  background: #fff;
+  position: relative;
+}
+
+.cashgoodsbox {
+  position: absolute;
+  top: 72rpx;
+  overflow: hidden;
+  width: 100%;
+  height: 224rpx;
+  background: #fff;
+    border-top: 1px solid #dedede;
+}
+.cashtop{
+  width: 100%;
+  height: 72rpx;
+line-height: 72rpx;
+  position: relative;
+}
+.cashselectbox{
+  position: absolute;
+  left: 20rpx;
+  top: 5rpx;
+}
+.spqlogo{
+  position: absolute;
+  top: 24rpx;
+  left: 72rpx;
+  width: 76rpx;
+  height: 28rpx;
+}
+.cash_tip{
+  color: #f76d18;
+  position: absolute;
+  left: 160rpx;
+  font-size: 26rpx;
+}
+
+ /* 失效商品 */
+ .failuregoodslist{
+   margin-top: 20rpx;
+ }
+ .failtitle{
+   overflow: hidden;
+   background: #fff;
+   width:100%;
+   text-align: center;
+   height: 72rpx;
+   line-height: 72rpx;
+   font-size: 30rpx;
+   border-bottom: 1px solid #dedede;
+   color: #545454;
+ }
+ .failtgoods{
+   margin: 0;
+   border-bottom: 1px solid #dedede;
+ }
+ .goodstip{
+   font-size: 24rpx;
+   color: #000;
+ }
+ .failgoodsname{
+   color: #999;
+ }
+ .goodsimglayer{
+     width: 178rpx;
+  height: 178rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 80rpx;
+ background: rgba(255,255,255,0.50);
+ }
+ .failtip{
+   position: absolute;
+   top: 96rpx;
+   left: 20rpx;
+   font-size: 24rpx;
+   color: #999;
+ }
+ .delebox{
+   right: 20rpx;
+   color: #999;
+   top: 70rpx;
+   position: absolute;
+   overflow: hidden;
+ }
+ .deleboxlogo{
+   width: 36rpx;
+   height: 34rpx;
+   position: absolute;
+   left: 6rpx;
+ }
+ .deletip{
+   font-size: 24rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 40rpx;
+ }
+ .selectall{
+   color: #000;
+   font-size: 26rpx;
+   position: absolute;
+   left: 80rpx;
+ }
+ .allSelectbox{
+   position: absolute;
+   left: 20rpx;
+   top: 5rpx;
+   width: 36rpx;
+   height: 36rpx;
+ }
+  .allSelectbox >image{
+    width: 100%;
+    height: 100%;
+  }

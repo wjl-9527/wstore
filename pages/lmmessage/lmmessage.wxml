@@ -1,0 +1,1 @@
+<web-view  src="{{lmUrl}}" bindmessage='msgHandle'></web-view>     

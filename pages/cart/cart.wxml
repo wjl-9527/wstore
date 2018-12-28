@@ -1,0 +1,82 @@
+<!-- 导航栏 -->
+<view class='b_nav_box'>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="index">
+    <image src='../image/index.png'></image>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="calss">
+    <image src='../image/n_class.png'></image>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="0" data-kind="cart">
+    <image src='../image/a_n_cart.png'></image>
+     <view wx:if="{{num != 0 }}" class='box-infor num num2'>1</view>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="my">
+    <image src='../image/n_my.png'></image>
+  </view>
+</view>
+
+<!-- 购物车 -->
+<view class='cartwall'>
+  <view class='no' wx:if="{{normalCartList.length == 0}}">
+    <image class='nogoodslogo' src='../image/cart-no.png'></image>
+    <text class='nogoodstip'>购物车是空的~快去购物吧~</text>
+    <view bindtap='gotosee' class='nogoodstxt'>继续逛逛</view>
+  </view>
+  <view else>
+<!-- 正常商品列表 -->
+    <view class='normalgoodslist'>
+      <view bind:longpress='deleGoods' data-skuid="{{item.skuId}}" data-prdId='{{item.productId}}' class='normalgoods' wx:for="{{normalCartList}}" wx:key="id" wx:if="{{item.unused1 != 'N'}}">
+        <view class='goodsname'>{{item.productName}}</view>
+        <view class='goodspec'>{{item.specColor}}</view>
+        <image class='goodsimg' src='{{item.productMainImage}}'></image>
+        <view class='goodsprc'>
+          <text>￥</text>{{item.productPrice}}</view>
+        <!-- 商品数量盒 -->
+        <view class='numbox'>
+          <text class='goodsnum'>{{item.productStock}}</text>
+          <image catchtap='cutNum' data-skuid="{{item.skuId}}" data-prdId='{{item.productId}}' data-quantity='{{item.productStock}}' data-check='{{item.productChecked}}' class='cutnum' src='../image/cut.png'></image>
+          <image catchtap='addNum' data-skuid="{{item.skuId}}" data-prdId='{{item.productId}}' data-quantity='{{item.productStock}}' data-check='{{item.productChecked}}' class='addnum' src='../image/addgoods.png'></image>
+        </view>
+        <!-- 选中盒子 -->
+        <view class='selectbox'>
+          <image bindtap='selectGoods' data-kind='select' data-catId="{{item.id}}" wx:if="{{item.productChecked == 1}}" class='select' src='../image/selcet.png'></image>
+          <image bindtap='selectGoods' data-kind='noselect' data-catId="{{item.id}}" wx:else class='select' src='../image/noselect.png'></image>
+        </view>
+      </view>
+
+    </view>
+
+    <!-- 失效商品列表 -->
+    <view class='failuregoodslist'  wx:if="{{failuregoodsList.length != 0}}">
+      <view class='failtitle'>失效商品</view>
+      <view bind:longpress='deleGoods' data-skuid="{{item.skuId}}" data-prdId='{{item.productId}}' class='normalgoods failtgoods' wx:for="{{failuregoodsList}}" wx:key="id">
+        <view class='goodsname failgoodsname'>{{item.productName}}   <text wx:if="{{item.item_type == 3}}">{{item.item_sale_pack_num}}{{item.item_unit}}</text></view>
+        <image class='goodsimg' src='{{item.productMainImage}}'></image>
+        <view class='goodsimglayer'></view>
+        <view class='goodsprc goodstip'>
+          没货了
+        </view>
+        <view class='failtip'>失效</view>
+        <view bindtap='deleGoods' data-skuid="{{item.skuId}}" data-quantity='{{item.quantity}}'  data-prdId='{{item.productId}}'class='delebox'>
+          <image class='deleboxlogo' src='../image/dele.png'></image>
+          <view class='deletip'>删除</view>
+        </view>
+      </view>
+    </view>
+
+    <view style='width:100%;height:200rpx;'></view>
+    <view class='cartnav' wx:if="{{cartNum != 0}}">
+      <view class='allSelectbox'>
+        <image bindtap='allSelect' data-kind='select'  wx:if="{{allChecked == true}}" class='select' src='../image/selcet.png'></image>
+        <image bindtap='allSelect' data-kind='noselect'  wx:else class='select' src='../image/noselect.png'></image>
+      </view>
+      <text class='selectall'>全选</text>
+      <view class='totaltip'>
+        <text>合计:</text>￥{{totalPrice}}
+        <text wx:if="{{totalPrice >= expemotFreight}}">(免运费)</text>
+      </view>
+      <view bindtap='setOrder' class='toClear'>去结算</view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,96 @@
+<!-- 顶部 -->
+<!-- 搜索 -->
+<view style='background-color:#fff;padding-bottom:10px;'>
+<view class='tosearch' bindtap='toSearch'>
+  <view class='serachbox'>
+    <image class='searchlogo' src='../image/search.png'></image> 搜索商品
+  </view>
+</view>
+
+<!-- 新品推荐 -->
+<view class='hotImg'><image src='../image/new.png'></image></view>
+<view class="like-top">
+    <view class='line-left'></view>
+    <view class="liketop-name">新品推荐</view>
+    <view class='line-right'></view>
+</view>
+<view class='newlist'>
+  <navigator url='' wx:for="{{newImg}}" wx:key="index">
+    <view class='new-img'><image src='{{item}}'></image></view>
+  </navigator>
+</view>
+</view>
+
+
+<!-- 销量前10 -->
+<view style='background-color:#fff;'>
+<view class='hotImg'><image src='../image/top.png'></image></view>
+<view class="like-top">
+    <view class='line-left'></view>
+    <view class="liketop-name">销量前10</view>
+    <view class='line-right'></view>
+</view>
+
+<view class="topten">
+<scroll-view class="scroll-view_x" scroll-x>
+
+  <view class="toplist">
+     <navigator class="toplilf" wx:for="{{content}}" wx:key="productId" bindtap='toDetailsTap' data-productId='{{item.productId}}'>
+        <view class="topro-img"><image src="{{item.listingPic}}" alt=""></image></view>
+        <view class="top-details">
+              <view class="topro-name plr26 text-elli">{{item.title}}</view>
+              <view class="topro-price clearfix plr26"><text class="fl">￥<text>{{item.salePrice}}</text></text></view>
+        </view>
+     </navigator>
+
+      <view style='clear:both;'></view>
+  </view>
+  </scroll-view>
+</view>
+</view>
+
+<view style='background-color:#fff;'>
+  <!--人气推荐 begin-->
+<view class="seclist">
+  <view class="user-like">
+   <view class='hotImg'><image src='../image/hot.png'></image></view>
+    <view class="like-top">
+      <view class='line-left'></view>
+      <view class="liketop-name">人气推荐</view>
+      <view class='line-right'></view>
+    </view>
+    
+
+<view class='poplist' wx:for="{{content}}" wx:key="productId">
+        <view class="popro-img"><image src="{{item.listingPic}}" alt=""></image></view>
+        <view class="pop-details">
+          <view class="popro-name plr26 text-elli">{{item.title}}</view>
+          <view class="popro-price clearfix plr26"><text class="fl">￥<text>{{item.salePrice}}</text></text><text class="fr">￥{{item.mallPrice}}</text></view>
+          <view class="checkDetails" bindtap='toDetailsTap' data-productId='{{item.productId}}'>查看详情</view>
+        </view>
+       <view style='clear:both;'></view>
+</view>
+</view>
+  </view>
+</view>
+<!--猜你喜欢 end-->
+
+
+
+<view style='width:100%;height:100rpx;'></view>
+<!-- 导航栏 -->
+<view class='b_nav_box'>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="0" data-kind="index">
+    <image src='../image/a_index.png'></image>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="calss">
+    <image src='../image/n_class.png'></image>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="cart">
+    <image src='../image/n_cart.png'></image>
+    <view wx:if="{{num != 0 }}" class='box-infor num num2'>1</view>
+  </view>
+  <view bindtap='bottomNav' class='b_n_nav' data-ispage="1" data-kind="my">
+    <image src='../image/n_my.png'></image>
+  </view>
+</view>

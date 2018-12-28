@@ -1,0 +1,109 @@
+page{
+  background: #F3F3F3;
+}
+.couponList{
+  width: 702rpx;
+  height: 212rpx;
+  background: #FFFFFF;
+  margin-left: 26rpx;
+  margin-top: 22rpx;
+  overflow:hidden;
+}
+.content{
+  font-size: 28rpx;
+  width: 438rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+  margin-top: 32rpx;
+  line-height: 40rpx;
+}
+.border_bottom{
+  border-bottom:2rpx dashed  #DEDEDE; 
+  height: 4rpx;
+  width: 662rpx;
+  margin-left: 20rpx;
+  margin-top: 28rpx;
+}
+.endData{
+  width: 400rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #999999;
+  margin-left: 40rpx;
+  margin-top: 12rpx;
+}
+.rightView{
+  height: 90rpx;
+  width: 170rpx;
+  float: right;
+  margin-right: 10rpx;
+  margin-top: -90rpx;
+}
+.rightCon{
+  width: 170rpx;
+  font-size: 24rpx;
+  color: #000000;
+  margin-top: 10rpx;
+}
+.rightNum{
+  color: #F76D18;
+  font-size: 40rpx;
+}
+.rightNum1{
+  color: #999999;
+  font-size: 40rpx;
+}
+.bottom_button{
+  background: #FFFFFF;
+  width: 750rpx;
+  height: 100rpx;
+  bottom: 0rpx;
+  position:fixed;
+  line-height: 100rpx
+}
+.button1{
+  width: 188rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  border: 2rpx solid #DEDEDE;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  margin-right: 24rpx;
+  float: right;
+}
+.toMore{
+  margin-left: 308rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #545454;
+  width: 200rpx;
+  height: 40rpx;
+}
+.scroll_view{
+  height: 1200rpx;
+}
+.botton_zw{
+  width: 750rpx;
+  height: 100rpx;
+}
+.couponsImg{
+  width: 88rpx;
+  height: 88rpx;
+  float: right; 
+  margin-right: 60rpx;
+  margin-top: -28rpx;
+}
+.nocouponListImg{
+  width: 182rpx;
+  height: 182rpx;
+  margin-left: 284rpx;
+  margin-top: 418rpx;
+}
+.nocouponListNum{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}

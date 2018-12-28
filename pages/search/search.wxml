@@ -1,0 +1,60 @@
+<!-- 搜索框 -->
+<view class='searchbox'>
+  <image class='searchlogo' src='../image/search2.png'></image>
+  <view class='clearlogowall' bindtap='clearKeyWord' >
+    <image class='clearlogo' src='../image/clear.png'></image>
+  </view>
+
+  <view class='serachbtn' bindtap='serach'>搜索</view>
+  <input bindinput='getKeyWord' value='{{keyword}}' class='search' placeholder='搜索商品'></input>
+</view>
+<view class='statu1' wx:if="{{status == 1}}">
+  <!-- 历史记录 -->
+  <view class='historywall' wx:if="{{keywordlist.length != 0}}">
+    <view class='historytit'>历史搜索</view>
+    <view class='clearwall' bindtap='clearhis'>
+      <image class='.delelogo' src='../image/dele2.png'></image>
+      <view class='cleartxt'>清空历史搜索 </view>
+    </view>
+    <view class='historybox'>
+      <view class='history' bindtap='clickhisword' data-index='{{i}}' wx:for-index="i" wx:for="{{keywordlist}}" wx:key="i">{{item}}</view>
+    </view>
+  </view>
+</view>
+<!-- 中间页 -->
+<view class='statu2' wx:if="{{status == 2}}"></view>
+<!-- 搜索结果 -->
+<view class='statu3' wx:if="{{status == 3}}">
+  <!-- 顶部排序 -->
+  <view class='sorting'>
+    <view class='sortingbox' bindtap='tapStor' data-index='{{i}}' wx:for-index="i" class='sortingbtn' wx:for="{{sorting}}" wx:key="title" style='{{item.select == "0" ? "color:#FF7E37" : "#000"}}'>
+      {{item.title}}
+
+      <image class='slectpriclogo' wx:if="{{i == '1' && item.select == '1'}}" src='../image/selectprclog2.png'></image>
+      <image wx:if="{{i == '1' && item.select == '0'}}" class='slectpriclogo' src='../image/selectprclog.png'></image>
+    </view>
+  </view>
+  <!-- 商品表 -->
+  <view class='have'>
+    <!-- 商品栏 -->
+    <view class='goodsWallBox'>
+      <scroll-view scroll-top="{{scrollTop.scroll_top}}" class='goodsWall' scroll-y bindscrolltolower='getmore' wx:if="{{goodsList.length != 0}}">
+        <view bindtap='toGoodesDetails' data-productId="{{item.productId}}" class='goodsbox' wx:for="{{goodsList}}" wx:key="index">
+          <view class='box-infor goodsname'>{{item.title}} <text wx:if="{{item.item_type == 3}}">{{item.sellPoint}}</text></view>
+          <image class='box-infor goodsimg' src='{{item.listingPic}}'></image>
+          <view class='box-infor goodsepric'>
+            <text>￥{{item.salePrice}}</text>
+            <text style='color:#fff;'>..</text>
+            <text class=' goodseoldpric'>￥{{item.mallPrice}}</text>
+          </view>
+        </view>
+      </scroll-view>
+      <view class='goodsWall goodsWall2' wx:else>
+        <image src='../image/nosearch.png' class='nogoodslogo'></image>
+        <view class='nogoodstip'>未搜到相关商品</view>
+      </view>
+
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,17 @@
+<view class='payTop'>
+  <view class='toptext'>2小时自动关闭订单，请尽快支付</view>
+  <view class='box'>
+  <view class='toptext2'>￥</view>
+  <view class='toptext1'>{{order_amount}}</view>
+  </view>
+</view>
+<view class='paym'>选择支付方式</view>
+<view class='payh'>
+  <image class='payhim' src='../image/payimg.png'></image>
+  <view class='payhtext'>微信支付</view>
+  <image class='payhim1' src='../image/selcet.png'></image>
+</view>
+<view class='paybut' bindtap='getPaySign'>
+  <view class='buttext1'>确认支付</view>
+  <view class='buttext2'>￥{{order_amount}}</view>
+</view>
